@@ -2,7 +2,6 @@ function wait(fn)
 {
   window.setTimeout(fn,3000);
 }
-
 var NICK;
 var CHANNEL;
 var SERVER;
