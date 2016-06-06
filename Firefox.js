@@ -1,12 +1,6 @@
-var NOT_OVER = true;
-function wait()
+function wait(fn)
 {
-  window.setTimeout(function(){NOT_OVER=false;},5000);
-  while(NOT_OVER)
-  {
-    
-  }
-  NOT_OVER = true;
+  window.setTimeout(fn,3000);
 }
 
 var NICK = "Zachary";
@@ -14,16 +8,22 @@ var CHANNEL = "#chat";
 var SERVER = ""; //Not showwing the server
 
 var w = window.open("https://www.kiwiirc.com");
-wait();
+wait(function(){
 w.document.getElementsByClassName("btn")[2].click();
-wait();
+wait(function(){
 
 w.document.getElementById("server_select_nick").value = NICK;
-wait();
+wait(function(){
 w.document.getElementById("server_select_channel").value = CHANNEL;
-wait();
+wait(function(){
 w.document.getElementsByClassName("show_more")[0].click();
-wait();
+wait(function(){
 w.document.getElementById("server_select_server").value = SERVER;
-wait();
+wait(function(){
 w.document.getElementsByTagName("button")[0].click();
+});
+});
+});
+});
+});
+});
