@@ -1,3 +1,0 @@
-Insert into developer console for Firefox,
-Run, after you allow popups.
-INSERT IN THE PAGE THAT IS DESIRED TO BE OPEN!
