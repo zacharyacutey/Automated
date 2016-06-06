@@ -1,0 +1,2 @@
+Insert into developer console for Firefox,
+Run, after you allow popups.
