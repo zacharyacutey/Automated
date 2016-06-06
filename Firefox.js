@@ -3,9 +3,9 @@ function wait(fn)
   window.setTimeout(fn,3000);
 }
 
-var NICK = "Zachary";
-var CHANNEL = "#chat";
-var SERVER = ""; //Not showwing the server
+var NICK;
+var CHANNEL;
+var SERVER;
 
 var w = window.open("https://www.kiwiirc.com");
 wait(function(){
