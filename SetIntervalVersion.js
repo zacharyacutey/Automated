@@ -38,7 +38,7 @@ wait(function(){
 w.document.getElementById("server_select_server").value = SERVER;
 wait(function(){
 w.document.getElementsByTagName("button")[0].click();
-INTERVAL = window.setInterval(g,500);
+INTERVAL = window.setInterval(function(){g();},500);
 });
 });
 });
