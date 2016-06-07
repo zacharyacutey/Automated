@@ -4,12 +4,12 @@ function wait(fn)
 }
 function wait2(fn)
 {
-  window.setTimeout(fn,250);
+  window.setTimeout(fn,50);
 }
-var NICK;
-var CHANNEL;
-var SERVER;
-var MESSAGE;
+var NICK="SPAM";
+var CHANNEL="#chat";
+var SERVER="connorb.xyz";
+var MESSAGE="SPAM";
 var w = window.open("https://www.kiwiirc.com");
 wait(function(){
 w.document.getElementsByClassName("btn")[2].click();
