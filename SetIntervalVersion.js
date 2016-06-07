@@ -11,7 +11,7 @@ var NICK="SPAM";
 var CHANNEL="#chat";
 var SERVER="";
 var MESSAGE="SPAM";
-var ITERATIONS = 100;
+var ITERATIONS = 10;
 var ITERATED = 0;
 function g(){
 if(ITERATIONS == ITERATED)
