@@ -34,13 +34,13 @@ var w = window.open("https://www.kiwiirc.com");
 
 var window1 = window.open("https://www.kiwiirc.com");
 var window2 = window.open("https://www.kiwiirc.com");
-
-function spam(w) {
+var done = false;
+function spam(w,N) {
     wait(function(){
         w.document.getElementsByClassName("btn")[2].click();
         wait(function(){
 
-            w.document.getElementById("server_select_nick").value = NICK;
+            w.document.getElementById("server_select_nick").value = N;
             wait2(function(){
 
                 w.document.getElementById("server_select_channel").value = CHANNEL;
@@ -63,5 +63,5 @@ function spam(w) {
     });
 }
 
-spam(window1);
-spam(window2);
+spam(window1,NICK);
+spam(window2,NICK+"_");
