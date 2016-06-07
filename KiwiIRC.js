@@ -1,14 +1,15 @@
 //To import JQuery: var script = document.createElement('script');script.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js";document.getElementsByTagName('head')[0].appendChild(script);
-
-function wait(fn) {
-  window.setTimeout(fn,5000);
-}
+var DELAY = 5000;
 var NICK = "SPAM";
 var CHANNEL = "#chat";
 var SERVER = "connorb.xyz";
 var MESSAGE = "SPAM";
 var INTERVAL = 500;
 var ITERATIONS = 20;
+function wait(fn)
+{
+	window.setTimeout(fn,DELAY)
+}
 function spam_spam(window_)
 {
 	function wait3(fn)
