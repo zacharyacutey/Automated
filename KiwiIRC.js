@@ -3,26 +3,19 @@
 function wait(fn) {
   window.setTimeout(fn,5000);
 }
-
-function wait2(fn) {
-  window.setInterval(fn,500);
-}
-
-function g(w) {
-		w.document.getElementsByTagName("textarea")[0].value=MESSAGE;
-
-		w.$(w.document.getElementsByTagName("textarea")[0]).trigger({type: 'keydown', which: 13, keyCode: 13});
-
-		wait2(g);
-}
+var NICK = "SPAM";
+var CHANNEL = "#chat";
+var SERVER = "connorb.xyz";
+var MESSAGE = "SPAM";
+var INTERVAL = 500;
+var ITERATIONS = 20;
 function spam_spam(window_)
 {
 	function wait3(fn)
 	{
-  		window_.setTimeout(fn,250);
+  		window_.setTimeout(fn,INTERVAL);
 	}
 	var MESSAGE="SPAM";
-	var ITERATIONS = 20;
 	var ITERATED = 0;
 	function G(){
 		if(ITERATIONS == ITERATED)
@@ -36,11 +29,6 @@ function spam_spam(window_)
 	}
 	G();
 }
-var NICK = "SPAM";
-var CHANNEL = "#chat";
-var SERVER = "connorb.xyz";
-var MESSAGE = "SPAM";
-
 var window1 = window.open("https://www.kiwiirc.com");
 function spam(w) {
     wait(function(){
