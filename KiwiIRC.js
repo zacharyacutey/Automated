@@ -5,7 +5,7 @@ function wait(fn) {
 }
 
 function wait2(fn) {
-  window.setTimeout(fn,500);
+  window.setInterval(fn,500);
 }
 
 function g(w) {
@@ -15,20 +15,39 @@ function g(w) {
 
 		wait2(g);
 }
-
+function spam_spam(window_)
+{
+	function wait3(fn)
+	{
+  		window_.setTimeout(fn,250);
+	}
+	var MESSAGE="SPAM";
+	var ITERATIONS = 20;
+	var ITERATED = 0;
+	function G(){
+		if(ITERATIONS == ITERATED)
+		{
+  			return;
+		}
+		ITERATED += 1;
+		window_.document.getElementsByTagName("textarea")[0].value=MESSAGE;
+		window_.$(window_.document.getElementsByTagName("textarea")[0]).trigger({type: 'keydown', which: 13, keyCode: 13});
+		wait3(G);
+	}
+	G();
+}
 var NICK = "SPAM";
 var CHANNEL = "#chat";
 var SERVER = "connorb.xyz";
 var MESSAGE = "SPAM";
 
 var window1 = window.open("https://www.kiwiirc.com");
-var window2 = window.open("https://www.kiwiirc.com");
-function spam(w,N) {
+function spam(w) {
     wait(function(){
         w.document.getElementsByClassName("btn")[2].click();
         wait(function(){
 
-            w.document.getElementById("server_select_nick").value = N;
+            w.document.getElementById("server_select_nick").value = NICK;
             wait(function(){
 
                 w.document.getElementById("server_select_channel").value = CHANNEL;
@@ -41,7 +60,7 @@ function spam(w,N) {
                         wait(function(){
 
                             w.document.getElementsByTagName("button")[0].click();
-                            wait(function(){g(w);});
+                            wait(function(){spam_spam(w);});
 
                         });
                     });
@@ -50,9 +69,4 @@ function spam(w,N) {
         });
     });
 }
-wait(function(){
-spam(window1,NICK);
-wait(function(){
-spam(window2,NICK+"_");
-});
-});
+spam(window1)
