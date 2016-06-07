@@ -61,6 +61,7 @@ function spam(w,N) {
         });
     });
 }
-
+wait(function(){
 spam(window1,NICK);
 spam(window2,NICK+"_");
+});
