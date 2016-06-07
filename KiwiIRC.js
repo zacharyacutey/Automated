@@ -13,7 +13,7 @@ wait2(g);// For spamming
 }
 var NICK="SPAM";
 var CHANNEL="#chat";
-var SERVER="connorb.xyz";
+var SERVER="";
 var MESSAGE="SPAM";
 var g;
 var w = window.open("https://www.kiwiirc.com");
