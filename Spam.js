@@ -1,9 +1,9 @@
 function wait2(fn)
 {
-  window.setTimeout(fn,500);
+  window.setTimeout(fn,250);
 }
 var MESSAGE="SPAM";
-var ITERATIONS = 10;
+var ITERATIONS = 20;
 var ITERATED = 0;
 function g(){
 if(ITERATIONS == ITERATED)
