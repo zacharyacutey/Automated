@@ -6,21 +6,23 @@ function wait2(fn)
 {
   window.setTimeout(fn,500);
 }
-function g(){
-try{
-w.document.getElementsByTagName("textarea")[0].value=MESSAGE;
-w.$(w.document.getElementsByTagName("textarea")[0]).trigger({type: 'keydown', which: 13, keyCode: 13});
-wait2(g);// For spamming
-}
-catch(e)
-{
-  console.log("ERROR HAS OCCURRED");
-}
-}
 var NICK="SPAM";
 var CHANNEL="#chat";
 var SERVER="";
 var MESSAGE="SPAM";
+var ITERATIONS = 100;
+var ITERATED = 0;
+function g(){
+if(ITERATIONS == ITERATED)
+{
+  return;
+}
+ITERATED += 1;
+w.document.getElementsByTagName("textarea")[0].value=MESSAGE;
+w.$(w.document.getElementsByTagName("textarea")[0]).trigger({type: 'keydown', which: 13, keyCode: 13});
+wait2(g);
+}
+
 var w = window.open("https://www.kiwiirc.com");
 wait(function(){
 w.document.getElementsByClassName("btn")[2].click();
