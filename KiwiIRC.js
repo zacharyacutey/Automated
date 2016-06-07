@@ -4,7 +4,7 @@ function wait(fn)
 }
 function wait2(fn)
 {
-  window.setTimeout(fn,10);
+  window.setTimeout(fn,1);
 }
 var NICK="SPAM";
 var CHANNEL="#chat";
