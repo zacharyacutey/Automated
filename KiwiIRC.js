@@ -29,8 +29,6 @@ var NICK = "SPAM";
 var CHANNEL = "#chat";
 var SERVER = "connorb.xyz";
 var MESSAGE = "SPAM";
-var w = window.open("https://www.kiwiirc.com");
-
 
 var window1 = window.open("https://www.kiwiirc.com");
 var window2 = window.open("https://www.kiwiirc.com");
