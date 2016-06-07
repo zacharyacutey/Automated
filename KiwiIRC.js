@@ -2,7 +2,21 @@ var DELAY = 5000;
 var NICK = "SPAM";
 var CHANNEL = "#chat";
 var SERVER = "connorb.xyz";
-var MESSAGE = "SPAM";
+var MESSAGE = `Pure blank canvases always bring me joy
+A sky waiting to be sprinkled with stars
+Like the innocent eyes of a young boy
+Or a field stretching unreachably far
+Valant adventures anxious to be had
+Poems and songs screaming to be released
+Happy or fearful, nostalgic or sad
+Creativity should never be ceased
+The world itself is you own blank canvas
+To write or paint your own unique story
+To believe that it's wired against us
+Is useless and unbearably boring
+Although I know it's difficult to see
+Your canvas is just what you want it to be
+`;
 var INTERVAL = 500;
 var ITERATIONS = 20;
 function wait(fn)
