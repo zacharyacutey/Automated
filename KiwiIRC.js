@@ -8,7 +8,7 @@ function wait2(fn) {
   window.setTimeout(fn,500);
 }
 
-function g() {
+function g(w) {
 	try 
 	{
 		w.document.getElementsByTagName("textarea")[0].value=MESSAGE;
@@ -32,28 +32,36 @@ var MESSAGE = "SPAM";
 var w = window.open("https://www.kiwiirc.com");
 
 
-wait(function(){
-	w.document.getElementsByClassName("btn")[2].click();
-	wait(function(){
+var window1 = window.open("https://www.kiwiirc.com");
+var window2 = window.open("https://www.kiwiirc.com");
 
-		w.document.getElementById("server_select_nick").value = NICK;
-		wait(function(){
+function spam(w) {
+    wait(function(){
+        w.document.getElementsByClassName("btn")[2].click();
+        wait(function(){
 
-			w.document.getElementById("server_select_channel").value = CHANNEL;
-			wait(function(){
+            w.document.getElementById("server_select_nick").value = NICK;
+            wait2(function(){
 
-				w.document.getElementsByClassName("show_more")[0].click();
-				wait(function(){
+                w.document.getElementById("server_select_channel").value = CHANNEL;
+                wait2(function(){
 
-					w.document.getElementById("server_select_server").value = SERVER;
-					wait(function(){
+                    w.document.getElementsByClassName("show_more")[0].click();
+                    wait2(function(){
 
-						w.document.getElementsByTagName("button")[0].click();
-						wait(g);
+                        w.document.getElementById("server_select_server").value = SERVER;
+                        wait(function(){
 
-					});
-				});
-			});
-		});
-	});
-});
+                            w.document.getElementsByTagName("button")[0].click();
+                            wait(function(){g(w);});
+
+                        });
+                    });
+                });
+            });
+        });
+    });
+}
+
+spam(window1);
+spam(window2);
