@@ -4,18 +4,23 @@ function wait(fn)
 }
 function wait2(fn)
 {
-  window.setTimeout(fn,100);
+  window.setTimeout(fn,500);
 }
 function g(){
+try{
 w.document.getElementsByTagName("textarea")[0].value=MESSAGE;
 w.$(w.document.getElementsByTagName("textarea")[0]).trigger({type: 'keydown', which: 13, keyCode: 13});
 wait2(g);// For spamming
+}
+catch(e)
+{
+  console.log("ERROR HAS OCCURRED");
+}
 }
 var NICK="SPAM";
 var CHANNEL="#chat";
 var SERVER="";
 var MESSAGE="SPAM";
-var g;
 var w = window.open("https://www.kiwiirc.com");
 wait(function(){
 w.document.getElementsByClassName("btn")[2].click();
