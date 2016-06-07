@@ -22,7 +22,7 @@ wait(function(){
 w.document.getElementsByTagName("button")[0].click();
 wait(function(){
 w.document.getElementsByTagName("textarea")[0].value=MESSAGE;
-w.$(w.document.getElementsByTagName("textarea")).trigger({type: 'keypress', which: 13, keyCode: 13});
+w.$(w.document.getElementsByTagName("textarea")).trigger({type: 'keydown', which: 13, keyCode: 13});
 });
 });
 });
