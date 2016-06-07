@@ -20,9 +20,10 @@ wait(function(){
 w.document.getElementById("server_select_server").value = SERVER;
 wait(function(){
 w.document.getElementsByTagName("button")[0].click();
-wait(function(){
+wait(g=function(){
 w.document.getElementsByTagName("textarea")[0].value=MESSAGE;
 w.$(w.document.getElementsByTagName("textarea")).trigger({type: 'keydown', which: 13, keyCode: 13});
+//wait(g);// For spamming
 });
 });
 });
