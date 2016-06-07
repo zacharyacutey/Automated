@@ -5,7 +5,7 @@ function wait(fn)
 var NICK;
 var CHANNEL;
 var SERVER;
-
+var MESSAGE;
 var w = window.open("https://www.kiwiirc.com");
 wait(function(){
 w.document.getElementsByClassName("btn")[2].click();
@@ -20,6 +20,10 @@ wait(function(){
 w.document.getElementById("server_select_server").value = SERVER;
 wait(function(){
 w.document.getElementsByTagName("button")[0].click();
+wait(function(){
+w.document.getElementsByTagName("textarea")[0].value=MESSAGE;
+w.$(w.document.getElementsByTagName("textarea")).trigger({type: 'keypress', which: 13, keyCode: 13});
+});
 });
 });
 });
