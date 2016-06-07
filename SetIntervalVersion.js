@@ -6,6 +6,7 @@ function wait2(fn)
 {
   w.window.setTimeout(fn,500);
 }
+var INTERVAL;
 var NICK="SPAM";
 var CHANNEL="#chat";
 var SERVER="";
@@ -15,12 +16,12 @@ var ITERATED = 0;
 function g(){
 if(ITERATIONS == ITERATED)
 {
+  window.clearInterval(INTERVAL);
   return;
 }
 ITERATED += 1;
 w.document.getElementsByTagName("textarea")[0].value=MESSAGE;
 w.$(w.document.getElementsByTagName("textarea")[0]).trigger({type: 'keydown', which: 13, keyCode: 13});
-wait2(g);
 }
 
 var w = window.open("https://www.kiwiirc.com");
@@ -37,7 +38,7 @@ wait(function(){
 w.document.getElementById("server_select_server").value = SERVER;
 wait(function(){
 w.document.getElementsByTagName("button")[0].click();
-wait(g);
+INTERVAL = window.setInterval(g,500);
 });
 });
 });
