@@ -9,20 +9,11 @@ function wait2(fn) {
 }
 
 function g(w) {
-	try 
-	{
 		w.document.getElementsByTagName("textarea")[0].value=MESSAGE;
 
 		w.$(w.document.getElementsByTagName("textarea")[0]).trigger({type: 'keydown', which: 13, keyCode: 13});
 
 		wait2(g);
-
-	} 
-
-	catch(e) 
-	{
-	  console.log("ERROR HAS OCCURRED");
-	}
 }
 
 var NICK = "SPAM";
