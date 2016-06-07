@@ -34,20 +34,19 @@ var w = window.open("https://www.kiwiirc.com");
 
 var window1 = window.open("https://www.kiwiirc.com");
 var window2 = window.open("https://www.kiwiirc.com");
-var done = false;
 function spam(w,N) {
     wait(function(){
         w.document.getElementsByClassName("btn")[2].click();
         wait(function(){
 
             w.document.getElementById("server_select_nick").value = N;
-            wait2(function(){
+            wait(function(){
 
                 w.document.getElementById("server_select_channel").value = CHANNEL;
-                wait2(function(){
+                wait(function(){
 
                     w.document.getElementsByClassName("show_more")[0].click();
-                    wait2(function(){
+                    wait(function(){
 
                         w.document.getElementById("server_select_server").value = SERVER;
                         wait(function(){
