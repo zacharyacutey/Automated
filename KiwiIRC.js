@@ -2,6 +2,10 @@ function wait(fn)
 {
   window.setTimeout(fn,3000);
 }
+function wait2(fn)
+{
+  window.setTimeout(fn,250);
+}
 var NICK;
 var CHANNEL;
 var SERVER;
@@ -23,7 +27,7 @@ w.document.getElementsByTagName("button")[0].click();
 wait(g=function(){
 w.document.getElementsByTagName("textarea")[0].value=MESSAGE;
 w.$(w.document.getElementsByTagName("textarea")).trigger({type: 'keydown', which: 13, keyCode: 13});
-//wait(g);// For spamming
+wait2(g);// For spamming
 });
 });
 });
