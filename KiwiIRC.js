@@ -69,4 +69,4 @@ function spam(w) {
         });
     });
 }
-spam(window1)
+spam(window1);
