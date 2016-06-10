@@ -1,8 +1,8 @@
 var DELAY = 5000;
 var NICK = "SPAM";
 var CHANNEL = "#chat";
-var SERVER = "connorb.xyz";
-var MESSAGE = "Pure ... be";
+var SERVER = "";
+var MESSAGE = "SPAM";
 var INTERVAL = 500;
 var ITERATIONS = 20;
 function wait(fn)
