@@ -2,7 +2,7 @@ function wait2(fn)
 {
   window.setTimeout(fn,250);
 }
-var MESSAGE = "Pure .. be";
+var MESSAGE = "";
 var ITERATIONS = 20;
 var ITERATED = 0;
 function g(){
